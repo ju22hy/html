@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Tag</title>
+  </head>
+  <body>
+    <!-- div는 레이아웃의 지정을 위해 구획을 정하는 의미적 태그이다 -->
+    <!-- div 태그 자체는 구획을 정의하는 기능적 의미 외에 기능을 표현하지는 못한다. 하지만 html5에서 이들의 기능을 표현할 수 있도록 태그에 직관적인 의미를 부여한 것을 시맨틱 태그라 한다 -->
+
+    <!--
+   1. header **** : 페이지 상단 네비게이션 등
+   2. footer **** : 페이지 하단 기업 정보 등
+   3. section *** : 페이지 상위 컨텐츠 박스
+   4. article ** : 페이지 이미지와 글 등을 담는 박스
+   5. nav ** : 네비게이션
+   6. aside * : 페이지 좌우에 추가 정보를 담는 박스 -->
+    <!-- div.wrapper : 이 전체 페이지를 감싸는 div -->
+    <div class="wrapper">
+      <header>Header</header>
+      <section>
+        <aside>Aside</aside>
+        <div class="articles">
+          <article>Article 1</article>
+          <article>Article 2</article>
+        </div>
+      </section>
+      <footer>Footer</footer>
+    </div>
+
+    <style>
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Main Contents */
+      .wrapper {
+        /* 높이는 설정값을 지정하지 않고 컨텐츠의 높이로 지정한다 디바이스마다 넓이가 다르기 때문에 넓이 설정값이 중요 */
+        width: 60%;
+        /* border: 선 사용 */
+        border: 1px solid #333;
+        margin: auto;
+        padding: 10px;
+      }
+      /* 자식은 부모의 비율을 기준으로 한다 즉, 부모값을 100%로 볼 때의 자식값 몇%라고 생각하면 된다 */
+      header,
+      footer {
+        width: 100%;
+        border: 1px solid #333;
+        padding: 20px;
+        text-align: center;
+      }
+
+      section {
+        width: 100%;
+        border: 1px solid #333;
+        padding: 10px;
+        /* 10px 상하, 0 좌우 */
+        margin: 10px 0;
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+      }
+
+      aside,
+      .articles,
+      .articles > article {
+        width: 30%;
+        border: 1px solid #333;
+        padding: 20px;
+        text-align: center;
+      }
+
+      aside {
+        padding: 40px 0;
+      }
+      /* CSS는 위에 쓴 것보다 아래에 쓴 것이 우선적으로 입력됨
+      Q> ppt의 22페이지에 "앞에 선언된 스타일이 나중에 선언된 스타일 보다 우선순위가 높다." 부분이 있는데 위의 말과 상반되는 것 같습니다
+      A> 우선순위와 입력순위는 따로다! 이름이 같기 때문에 우선순위가 상관없고 입력순위가 높은 아래 값이 먼저 적용된 것 */
+      .articles {
+        width: 70%;
+        display: flex;
+        column-gap: 10px;
+      }
+
+      .articles > article {
+        width: 50%;
+      }
+    </style>
+  </body>
+</html>

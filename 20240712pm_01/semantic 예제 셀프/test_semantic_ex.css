@@ -1,0 +1,57 @@
+/* Reset */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Contents */
+.wrapper {
+  /* 높이는 설정값을 지정하지 않고 컨텐츠의 높이로 지정한다 디바이스마다 넓이가 다르기 때문에 넓이 설정값이 중요 */
+  width: 90%;
+  /* border: 선 사용 */
+  border: 1px solid rgb(154, 154, 154);
+  margin: auto;
+  padding: 10px;
+}
+
+header,
+footer {
+  width: 100%;
+  border: 1px solid rgb(154, 154, 154);
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  width: 100%;
+  border: 1px solid rgb(154, 154, 154);
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  column-gap: 10px;
+}
+
+aside,
+.articles,
+.articles > article {
+  width: 20%;
+  border: 1px solid #333;
+  padding: 20px;
+}
+
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.articles {
+  width: 60%;
+  text-align: center;
+}
+
+.articles > article {
+  width: 100%;
+  margin: 5px 0;
+}

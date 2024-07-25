@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi Media</title>
+    <style>
+      /* 사이즈 값을 둘 다 지정하면 사진의 비율이 찌그러짐 */
+      img {
+        height: 200px;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- - 이미지
+  1. 사진의 크기 지정을 안하면 원래 사이즈의 사진이 구현된다.
+  2. 사진의 사이즈를 지정할 때는 가로나 세로 중 하나만 지정한다.
+  3. alt는 사진의 정보를 제공하고, 특히 사진의 설명을 음성으로 알려줄 때 사용된다.
+    따라서 사용 안 할 경우 웹접근성 점수가 떨어진다.
+  4. 이미지는 별도의 독립적 사용 보다는 감싸는 구획 태그를 사용한다.-->
+    <img src="sul.jpg" alt="이미지 없을 때 노출되는 텍스트 영역" />
+    <!-- ▼ 폴더 내의 하위 폴더에 있는 이미지 사용 시 이미지 불러오기 경로 -->
+    <img src="images/cat.png" alt="고양이" />
+    <!-- ▼ 다른 폴더의 이미지 사용 시 이미지 불러오기 경로 -->
+    <img src="../img/rabbit.png" alt="토끼" />
+    <br />
+    <!-- <div>
+      <img src="sul.jpg" alt="이미지 없을 때 노출되는 텍스트 영역" />
+    </div>
+
+    <style>
+      div {
+        width: 300px;
+        height: auto;
+        padding: 10px;
+        border: 1px solid #000;
+      }
+    </style> -->
+
+    <!-- - 비디오
+  1. 비디오 태그는  source에 주소를 입력하고 video 태그에 옵션을 입력한다.
+  2. autoplay는 muted와 함께 사용해야 한다.
+  3. mp4 확장 파일은 모든 브라우저에서 사용가능 하다.
+  4. controls : 컨트롤 제어 바 생성
+  5. loop : 자동 반복
+  6. autoplay : 자동 실행 -->
+    <video controls>
+      <source src="nike.mp4" />
+    </video>
+    <br />
+    <video controls autoplay muted loop>
+      <source src="nike.mp4" />
+    </video>
+  </body>
+</html>

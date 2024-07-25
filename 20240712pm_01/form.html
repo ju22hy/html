@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <!-- 1. form : 데이터를 서버로 전달할때 모든 전달 태그는 form 안에 감싸져야 한다 -->
+
+    <form action="" method="get"></form>
+
+    <!-- * action : 서버 경로를 나타냄 (백엔드쪽으로 보낼때)
+   - action 속성은 서버사이드에 어떤 파일로 연결되는지 경로를 지정한다.
+   - method 속성은 서버로 데이터를 전달하는 방식을 지정한다.
+      get과 post가 있는데 디폴트값은 get이다.
+    (보안에 신경쓰지 않아도 되는 데이터나 조회 데이터의 경우 주로 get을 사용하고, 많은 데이터 또는 입력 데이터의 경우 post를 사용한다.)-->
+
+    <!-- 2. input : 데이터를 전달할 수 있는 대표적인 태그이며, 속성의 type 요소를 통해 다양한 방식으로 데이터를 전달할 수 있다 -->
+
+    <!-- 3. label : input 데이터와 연결하는 태그이다
+  - label의 for 속성값과 input의 id 속성값이 같아야 한다
+  - label을 분리하여 사용하면 텍스트와 input 박스를 따로 디자인 할 수 있어서 편하다-->
+
+    <form>
+      <!-- ▼ label의 for 속성값과 input의 id 속성값이 같아야 한다 
+       Q> ex) for에 11을 썼으면 id에도 11? -->
+      <label for="id">아이디 : </label>
+      <input id="id" type="text" placeholder="아이디" />
+      <br />
+      비밀번호 : <input type="password" placeholder="비밀번호" />
+    </form>
+
+    <!-- ▼ 텍스트와 input 박스를 따로 디자인 할 수 있다 -->
+    <style>
+      label {
+        font-weight: bold;
+        color: blue;
+        border: 1px solid red;
+        padding: 10px 20px;
+      }
+    </style>
+
+    <div>----------------------------------------</div>
+    <!-- 4. checkbox -->
+    <!-- 중복 체크가 가능하다 -->
+    <form action="#">
+      영화감상: <input type="checkbox" /> <br />
+      음악감상: <input type="checkbox" />
+    </form>
+
+    <!-- 5. radio -->
+    <!-- 중복 체크가 되지 않으나 name 속성의 값이 같을 경우에 한한다 -->
+    <form action="#">
+      male: <input type="radio" name="gender" /> <br />
+      female: <input type="radio" name="gender" />
+    </form>
+
+    <!-- 6. select : 여러개의 데이터를 하나로 묶고 전달할 데이터를 드롭다운으로 선택한다 -->
+    <!-- selected 속성은 초기 선택값을 지정한다 -->
+    <!-- name의 값을 선택하여 서버로 전달하면 선택된 option의 값이 선택되어 전달 데이터로 지정된다 -->
+    <form action="#">
+      <select name="" id="">
+        <option value="s">시럽</option>
+        <option value="m">우유</option>
+        <option value="z">저지방 우유</option>
+        <option value="i">아이스크림</option>
+      </select>
+    </form>
+
+    <div>-------------------------------------------</div>
+    <!-- 7. 다양한 input 태그들 -->
+    <form action="">
+      <input type="text" placeholder="이름을 입력해 주세요." /><br />
+
+      <!-- 7-1. file : 파일을 서버로 전달할 때 사용한다. -->
+      파일 : <input type="file" /><br />
+
+      <!-- 7-2. image : 이미지를 전달할 때 사용한다. -->
+
+      <!-- 7-3. hidden : 사용자에게 보이지 않는 데이터를 전달할 때 사용한다. -->
+
+      <!-- 7-4. number : 숫자를 입력할 때 사용한다. -->
+      넘버 : <input type="number" /><br />
+
+      <!-- 7-5. color : 색상을 선택할 때 사용한다. -->
+      컬러 : <input type="color" /><br />
+
+      <!-- 7-6. range : 범위를 선택할 때 사용한다. -->
+      범위 : <input type="range" /><br />
+
+      <!-- 7-7. button : 버튼을 생성할 때 사용한다. -->
+      버튼 : <input type="button" value="button" />
+
+      <!-- 7-8. date : 날짜를 선택할 때 사용한다. -->
+      날짜 : <input type="date" /><br />
+
+      <!-- 7-9. time : 시간을 선택할 때 사용한다. -->
+
+      <!-- 7-10. datetime-local : 날짜와 시간을 선택할 때 사용한다. -->
+
+      <!-- 7-11. week : 주를 선택할 때 사용한다. -->
+
+      <!-- 7-12. month : 월을 선택할 때 사용한다. -->
+
+      <!-- 7-13. reset : form의 데이터를 초기화할 때 사용한다. -->
+
+      <!-- 7-14. search : 검색어를 입력할 때 사용한다. -->
+
+      <!-- 7-15. tel : 전화번호를 입력할 때 사용한다. -->
+
+      <!-- 7-16. url : url을 입력할 때 사용한다. -->
+
+      <!-- 7-17. email : 이메일을 입력할 때 사용한다. -->
+      <!-- 7-18. submit : form의 데이터를 전달할 때 사용한다. -->
+      <!-- submit을 클릭하면 action의 값 경로로 데이터를 보낸다 
+      ex) <form action="abc.php"> 일 경우 abc 서버로 데이터 전송 -->
+      <form action="#">
+        이메일 : <input type="email" />
+        <input type="submit" />
+      </form>
+
+      <!-- 8. textarea : 많은 글을 작성할 때 사용 -->
+      <!-- textarea의 디폴트로 크기가 임의로 변경된다. 하지만 css resize 속성의 값을 none으로 바꿔서 사용자가 사이즈를 임의 변경하는 것을 막을 수 있다. width와 height에 값을 주어 사이즈 조절 가능 -->
+      <textarea name="" id="" style="resize: none"></textarea>
+    </form>
+  </body>
+</html>

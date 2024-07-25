@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text</title>
+    <style>
+      strong {
+        color: red;
+        font-weight: 900;
+      }
+
+      p {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1. 디자인 관련 텍스트 -->
+    <i>기울임 글씨체</i>
+    <br />
+    <em>기울임 글씨체</em>
+    <br />
+    <b>굵은 글씨체</b>
+    <br />
+    <strong>굵은 글씨체</strong>
+
+    <!-- i, b는 디자인 이름을 이니셜로 만든 태그
+    em, strong은 의미를 이니셜로 만든 태그 -->
+
+    <!-- 인라인 텍스트 태그는 글씨 또는 단어의 디자인 분류를 위해 사용하는 경우가 많다 -->
+
+    <br />
+    <br />
+
+    <b><strong>코드랩 아카데미에</strong> 오신 것을 환영합니다.</b>
+
+    <br />
+
+    <!-- 2. paragraph 태그: 위아래 마진이 생김 -->
+    <!-- lorem 엔터 치면 더미 텍스트 -->
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, tempora
+      provident optio nisi eveniet facilis atque sint repellendus. Ipsum alias
+      porro earum, quod non fugit repudiandae ducimus vitae accusantium
+      necessitatibus.
+    </p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim, tempora
+      provident optio nisi eveniet facilis atque sint repellendus. Ipsum alias
+      porro earum, quod non fugit repudiandae ducimus vitae accusantium
+      necessitatibus.
+    </p>
+
+    <!-- 3. heading 태그 -->
+    <!-- heading 태그는 페이지의 중요한 콘텐츠 제목을 표시한다.
+    * 중요도는 h1 ~ h6 순이다.
+    * h1 태그는 한 페이지당 하나만 쓰기를 권장한다.
+    * h1 태그 이후 순서는 누락없이 사용하길 권장한다. 
+    * 블록 태그이기 때문에 한 줄을 다 사용한다. -->
+
+    <!-- h$*6{heading $} : $는 연속되는 숫자를 나타내며, 현재 6개가 곱해져 6까지를 표시한다. 또한 {}는 태그 내부에 컨텐츠를 표시한다. 
+    따라서 위의 명령어는 h를 1부터 6까지 표시한다-->
+    <h1>제목을 입력하세요 1</h1>
+    <h2>제목을 입력하세요 2</h2>
+    <h3>제목을 입력하세요 3</h3>
+    <h4>제목을 입력하세요 4</h4>
+    <h5>제목을 입력하세요 5</h5>
+    <h6>제목을 입력하세요 6</h6>
+
+    <!-- 4. a(anchor) 태그 -->
+    <!-- href : 이동할 링크 주소
+    target : 새창(_blank), 현재창(디폴트 옵션) 열기 옵션 -->
+
+    <!-- a 태그는 다른 페이지와 링크로 연결시킨다
+    보통 다른 사이트로의 연결보다는 자체 사이트의 페이지안 이동에도 많이 사용되며, 종종 같은 페이지간 이동에도 사용한다. (용도가 다름)
+    a 태그는 네비게이션 만들 때 무조건 써야 한다. -->
+
+    <a href="https://www.daum.net">다음으로 가기</a>
+    <br />
+    <a href="https://www.daum.net" target="_blank\">다음으로 가기</a>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+/* Reset style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #141414;
+  margin: auto;
+}
+
+/* Header style */
+header {
+  width: 600px;
+  background: lightgray;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  align-items: center;
+  border: 1px solid #c2c2c2;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.navi {
+  font-size: 12px;
+  display: flex;
+  column-gap: 12px;
+}
+
+.navi a:hover {
+  color: blue;
+}
+
+/* 챗 GPT */
+/* header {
+  width: 600px;
+  margin: 0 auto; 화면 중앙에 위치시키기 위해
+  padding: 0; 기본 패딩 없애기
+  text-align: center; 내용 가운데 정렬
+  background: lightgray;
+}
+header h2 {
+  margin: 0; 기본 마진 없애기
+  padding: 0; 기본 패딩 없애기
+}
+header ul {
+  list-style: none; 기본 리스트 스타일 없애기
+  margin: 0; 기본 마진 없애기
+  padding: 0; 기본 패딩 없애기
+  display: flex; 가로 배치
+  justify-content: center; 내용 가운데 정렬
+}
+header ul li {
+  margin: 0 10px; 각 리스트 아이템에 좌우 여백 추가
+}
+header ul li a {
+  text-decoration: none; 기본 텍스트 장식 없애기
+  color: black; 링크 색상 지정
+} */
